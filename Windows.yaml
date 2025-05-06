@@ -88,9 +88,9 @@ rules:
 # 教程
 # https://wiki.metacubex.one/config/rules/
 +rules:
- - PROCESS-NAME,Telegram.exe,Telegram
- - PROCESS-NAME,BCompare.exe,REJECT
- - PROCESS-NAME,PcanExpl.exe,REJECT
- - PROCESS-NAME,Pe6UpSrv.exe,REJECT
- - DOMAIN-SUFFIX,ghproxy.com,手动切换
- - DOMAIN-SUFFIX,cdn.jsdelivr.net,手动切换
+  - PROCESS-NAME,Telegram.exe,Telegram
+  - PROCESS-NAME,BCompare.exe,REJECT
+  - PROCESS-NAME,PcanExpl.exe,REJECT
+  - PROCESS-NAME,Pe6UpSrv.exe,REJECT
+  - DOMAIN-SUFFIX,ghproxy.com,手动切换
+  - DOMAIN-SUFFIX,cdn.jsdelivr.net,手动切换

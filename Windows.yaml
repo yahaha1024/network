@@ -47,7 +47,7 @@ proxy-groups:
 rule-providers:
   AdBlock:     {behavior: domain,    interval: 86400, format: text, type: http, url: https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt ,                                           path: ./ruleset/anti-ad-clash.txt }
   OpenAi:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml ,                      path: ./ruleset/OpenAi.yaml       }
-  Perplexity:  {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/yahaha1024/icons/refs/heads/main/perplexity.yaml ,                                       path: ./ruleset/Perplexity.yaml   }
+  Perplexity:  {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/yahaha1024/network/refs/heads/main/perplexity.yaml ,                                     path: ./ruleset/Perplexity.yaml   }
   BiliBili:    {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml ,                  path: ./ruleset/BiliBili.yaml     }
   Bahamut:     {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml ,                    path: ./ruleset/Bahamut.yaml      } 
   GlobalMedia: {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml ,  path: ./ruleset/GlobalMedia.yaml  }
@@ -67,9 +67,8 @@ rule-providers:
 # 分流Policy 
 rules:
   - RULE-SET,AdBlock,AdBlock
-  - RULE-SET,OpenAi,OpenAi
-  # - RULE-SET,OpenAi,Perplexity
   - RULE-SET,Perplexity,Perplexity
+  - RULE-SET,OpenAi,OpenAi
   - RULE-SET,BiliBili,哔哩哔哩
   - RULE-SET,Bahamut,台湾节点
   - RULE-SET,GlobalMedia,国际媒体

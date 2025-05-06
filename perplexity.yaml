@@ -1,0 +1,6 @@
+# NAME: perplexity
+
+payload:
+  - DOMAIN-SUFFIX,perplexity.ai
+  - DOMAIN-SUFFIX,pplx.ai
+  - DOMAIN-SUFFIX,perplexity.com

@@ -1,0 +1,127 @@
+# 2026/09/02
+
+# https://clashparty.org/docs/guide/override/yaml
+#==========================================
+# @ConfigName        墨鱼自用MihomoParty配置文件
+# @Author            @ddgksf2013
+# @TgChannel         https://t.me/ddgksf2021
+# @WechatID          墨鱼手记
+# @Feedback          💡请通过邮件反馈问题[其它方式一概无视]：𝐝𝐝𝐠𝐤𝐬𝐟𝟐𝟎𝟏𝟑@𝟏𝟔𝟑.𝐜𝐨𝐦 💡
+# @UpdateTime        2025/04/12 20:44 UTC/GMT +8
+# @Function          支持手动选择、自动测速、广告屏蔽、兜底分流、按国家分组节点、策略图标等  
+# @mihomo-party      https://github.com/mihomo-party-org/mihomo-party/releases
+# @howtouse          主界面添加本配置[覆写]，然后使用内置的[SubStore]添加机场，之后去[订阅管理]，在配置的[编辑信息]中绑定机场订阅，开启系统代理即可使用
+# @Thanks            @blackmatrix7, @Fndroid, @Anti, @Orz-3, @Koolson, @soffchen, @ACL4SSR, @Cats-Team
+# @ConfigVersion     1.0.20
+# @ConfigUrl         https://github.com/ddgksf2013/Profile/raw/master/MihomoParty.yaml
+#==========================================
+#https://223.5.5.5/dns-query
+#https://120.53.53.53/dns-query
+#dns:
+#  enable: false
+proxy-groups:
+#分流节点
+  - {name: 手动切换, type: select, proxies: [自动选择, 香港节点, 台湾节点, 新加坡, 美国节点, 日本节点, DIRECT], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Proxy.png }
+#  - {name: 手动切换, type: select, proxies: [自动选择, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 新加坡], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AI.png }
+#  - {name: 自动选择, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "港|HK|(?i)Hong", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png }
+  - {name: 自动选择,   type: fallback, proxies: [香港节点, 台湾节点, 新加坡, 美国节点, 日本节点], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png }
+  - {name: 兜底分流, type: select, proxies: [手动切换, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 新加坡], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png }
+#  - {name: Perplexity,   type: fallback, proxies: [AI,美国节点, 手动切换], icon: https://raw.githubusercontent.com/yahaha1024/icons/main/perplexity.PNG }
+  - {name: AI,   type: fallback, proxies: [圣何塞,西雅图,洛杉矶,美国节点, 新加坡, 日本节点, 台湾节点], icon: https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ChatGPT/ChatGPT5.png }
+#  - {name: Telegram, type: select, proxies: [手动切换, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 新加坡], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png }
+#  - {name: 国际媒体, type: select, proxies: [手动切换, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 新加坡], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png }
+#  - {name: 谷歌服务, type: select, proxies: [手动切换, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 新加坡], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png }
+#  - {name: 微软服务, type: select, proxies: [手动切换, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 新加坡], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png }
+#  - {name: 推特服务, type: select, proxies: [手动切换, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 新加坡], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png }
+#  - {name: 全球加速, type: select, proxies: [手动切换, DIRECT, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 新加坡], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png }
+  - {name: ------------------------------------------------------------------------, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Photos.png }
+#  - {name: 分割线⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄分割线, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Photos.png }
+  # - {name: 游戏平台, type: select, proxies: [DIRECT, 手动切换, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 新加坡], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/GAME.png }
+#  - {name: 苹果服务, type: select, proxies: [DIRECT, 手动切换, 自动选择, 香港节点, 日本节点, 台湾节点, 美国节点, 新加坡], icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/apple(1).png }
+#  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png }
+#  - {name: 去广告,  type: select, proxies: [REJECT, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png }
+#  - {name: 分割线⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)分割线.⁄, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Photos.png }
+#节点分组
+  - {name: 美国节点, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "美|US|(?i)States|American", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png }
+  - {name: 圣何塞, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "^(?!.*Premium).*San Jose.*", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png }
+  - {name: 洛杉矶, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "(?i)Los Angeles", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png }
+  - {name: 西雅图, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "(?i)Seattle", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png }
+  - {name: -------------------------------------------------------------------------, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Photos.png }
+  - {name: 香港节点, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "港|HK|(?i)Hong", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png }             
+  - {name: 日本节点, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "日|东京|JP|(?i)Japan", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png }
+  - {name: 台湾节点, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "台|湾|TW|(?i)Taiwan", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png }
+  - {name: 新加坡, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "新|坡|SG|(?i)Singapore", icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png }
+  - {name: 土耳其,   type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "土|(?i)tur", icon:  https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Turkey(2).png }
+  - {name: -----------------------------------------------------------------------, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Photos.png }
+# 分流规则 
+rule-providers:
+  AdBlock:     {behavior: domain,    interval: 86400, format: text, type: http, url: https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt ,                                           path: ./ruleset/anti-ad-clash.txt }
+#   AI:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml ,                      path: ./ruleset/OpenAi.yaml       }
+#  AI:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://gist.githubusercontent.com/ddgksf2013/cb4121e8b5c5d865cc949cb8120320c4/raw/Ai.yaml ,                               path: ./ruleset/OpenAi.yaml       }
+  AI:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ddgksf2013.top/filter/Ai.yaml ,                                                                                        path: ./ruleset/AI.yaml       }
+#  Perplexity:  {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/yahaha1024/network/refs/heads/main/perplexity.yaml ,                                       path: ./ruleset/Perplexity.yaml   }
+  BiliBili:    {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml ,                  path: ./ruleset/BiliBili.yaml     }
+  Bahamut:     {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml ,                    path: ./ruleset/Bahamut.yaml      } 
+  GlobalMedia: {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml ,  path: ./ruleset/GlobalMedia.yaml  }
+  Apple:       {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml ,              path: ./ruleset/Apple.yaml        }
+  Github:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml ,                      path: ./ruleset/Github.yaml       }
+  Microsoft:   {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml ,                path: ./ruleset/Microsoft.yaml    }
+  Google:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml ,                      path: ./ruleset/Google.yaml       }
+  Telegram:    {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml ,                  path: ./ruleset/Telegram.yaml     }
+  Twitter:     {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml ,                    path: ./ruleset/Twitter.yaml      }
+  Game:        {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml ,                          path: ./ruleset/Game.yaml         }
+  ProxyLite:   {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ProxyLite/ProxyLite.yaml ,                path: ./ruleset/ProxyLite.yaml    }
+  Direct:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml ,                      path: ./ruleset/Direct.yaml       }
+  Lan:         {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml ,                            path: ./ruleset/Lan.yaml          }
+  Download:    {behavior: classical, interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml ,                  path: ./ruleset/Download.yaml     }
+  ChinaIP:     {behavior: ipcidr,    interval: 86400, format: yaml, type: http, url: https://raw.githubusercontent.com/soffchen/GeoIP2-CN/release/clash-rule-provider.yml ,                                     path: ./ruleset/ChinaIP.yaml      }
+
+# 分流Policy 
+# RULE-SET,分流规则,分流节点
+rules:
+#  - RULE-SET,AdBlock,去广告
+#  - RULE-SET,Perplexity,AI
+  - RULE-SET,AI,AI
+  - RULE-SET,BiliBili,DIRECT
+  - RULE-SET,Bahamut,台湾节点
+  - RULE-SET,GlobalMedia,手动切换
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,Github,手动切换
+  - RULE-SET,Microsoft,DIRECT
+  - RULE-SET,Google,手动切换
+  # - RULE-SET,Telegram,Telegram
+  - RULE-SET,Twitter,手动切换
+  # - RULE-SET,Game,游戏平台
+  - RULE-SET,ProxyLite,手动切换
+  - RULE-SET,ChinaIP,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Download,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,兜底分流
+
+# 教程
+# https://wiki.metacubex.one/config/rules/
++rules:
+  - PROCESS-NAME,Telegram.exe,手动切换
+  - PROCESS-NAME,BCompare.exe,REJECT
+  - PROCESS-NAME,PcanExpl.exe,REJECT
+  - PROCESS-NAME,Pe6UpSrv.exe,REJECT
+  - DOMAIN-SUFFIX,ghproxy.com,手动切换
+  - DOMAIN-SUFFIX,cdn.jsdelivr.net,手动切换
+#  - DOMAIN-SUFFIX,rule.kelee.one,美国节点
+  - DOMAIN-SUFFIX,micu.hk,DIRECT
+  - DOMAIN-SUFFIX,mathworks.cn,DIRECT
+  - DOMAIN-SUFFIX,draw.io,DIRECT
+  - DOMAIN-SUFFIX,www.5bx6h.net,DIRECT
+  - DOMAIN-SUFFIX,stackoverflow.com,DIRECT
+#奶昔订阅分流
+  - DOMAIN-SUFFIX,cdn.primehelix.co,DIRECT
+#云桌面
+  - PROCESS-NAME,vmware-view.exe,DIRECT
+  - PROCESS-NAME,vmware-horizon.exe,DIRECT
+  - DOMAIN-SUFFIX,vmware.com,DIRECT
+  - DOMAIN-KEYWORD,bjev,DIRECT
+  - DOMAIN-SUFFIX,bjev.com.cn,DIRECT
+  - PROCESS-NAME,TrustCyberLink.exe,DIRECT
+  - PROCESS-NAME,openvpn-gui.exe,DIRECT

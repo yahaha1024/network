@@ -19,6 +19,12 @@
 #https://120.53.53.53/dns-query
 #dns:
 #  enable: false
+#DNS设置,云桌面调用公司DNS
+dns:
+  direct-nameserver:
+    - system
+  direct-nameserver-follow-policy: false
+  
 proxy-groups:
 #分流节点
   - {name: 手动切换, type: select, proxies: [自动选择, DIRECT, 香港节点, 日本节点, 台湾节点, 美国节点, 狮城节点], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Proxy.png }

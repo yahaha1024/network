@@ -116,9 +116,9 @@ rules:
   - DOMAIN-SUFFIX,cdn.primehelix.co,DIRECT
 #云桌面
   - PROCESS-NAME,vmware-view.exe,DIRECT
+  - DOMAIN-SUFFIX,bjev.com.cn,DIRECT
   # - PROCESS-NAME,vmware-horizon.exe,DIRECT
   # - DOMAIN-SUFFIX,vmware.com,DIRECT
   # - DOMAIN-KEYWORD,bjev,DIRECT
-  # - DOMAIN-SUFFIX,bjev.com.cn,DIRECT
   # - PROCESS-NAME,TrustCyberLink.exe,DIRECT
   # - PROCESS-NAME,openvpn-gui.exe,DIRECT
